@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function logout()
+        {
+            window.location.href = "start.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="">
+                    <h2>FLO<span class="blue">MO</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div> 
+            </div>
+
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">history</span>
+                    <h3>History</h3>
+                </a>
+                <a href="#">
+                    
+                    <span class="material-icons-sharp">logout</span>
+                    <input type="button" id="h3" value="Log Out" onclick="logout()"></button>
+                </a>
+            </div>
+        </aside>
+        <!---END OF ASIDE--->
+        <main>
+           <h1>Dashboard</h1>
+
+           <div class="insights">
+            <div class="location">
+                <span class="material-icons-sharp">map</span>
+                <div class="middle">
+                    <div class="left">
+                        <h3>Location</h3>
+                        <h1>Alangilan, Batangas City</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx='38' cy='38' r='36'></circle>
+                        </svg>
+                        <div class="number">
+                            <p>81%</p>
+                        </div>
+                    </div>
+                </div>
+                <small class="text-muted">Last 24 Hours</small>
+            </div>
+            <!---END OF LOCATION--->
+                <div class="humidity">
+                    <span class="material-icons-sharp">water_drop</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Humidity</h3>
+                            <h1>69%</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>69%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <!---END OF HUMIDITY--->
+           </div>
+           <div class="history">
+            <h2>History of Water Levels</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Level</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10:30</td>
+                        <td>50m</td>
+                        <td class="red-warning">Red Warning</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#">Show All</a>
+           </div>
+        </main>
+        <!---END OF MAIN--->
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+            </div>
+            <!---END OF TOP--->
+            <div class="monitor">
+                <h2>Water Level</h2>
+                <div class="cup" id="cup">
+                    <div class="waterlevel">
+                        <span id="WL">Water Level</span>
+                    </div>
+                    <div class="centimeters" id="centi">
+                    
+                    </div>
+                </div>
+                <p class="text" id="text">Water level at the location</p>
+            
+                <script src="WatLev.js"></script>
+                <script type="text/javascript" src="WatLev.js"></script>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>

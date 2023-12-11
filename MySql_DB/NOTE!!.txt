@@ -1,0 +1,1 @@
+Import this database to your PhpMyAdmin local host.
